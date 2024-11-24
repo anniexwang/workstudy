@@ -89,6 +89,12 @@ export default function DropdownScreen({ navigation }: Props) {
         style={styles.button}
         onPress={() => navigation.navigate('Dropdown')}
       >
+        <Text style={styles.buttonText}>EAS101</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('Dropdown')}
+      >
         <Text style={styles.buttonText}>EAS200</Text>
       </TouchableOpacity>
       <TouchableOpacity

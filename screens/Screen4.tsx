@@ -16,6 +16,7 @@ import * as Progress from 'react-native-progress';
 
 import { getList, getEngTranslation, getPinyin } from './Screen2';
 
+import { getMode } from './Screen1';
 
 type RootStackParamList = {
     Home: undefined;
@@ -65,12 +66,12 @@ const data = [
 
 export default function MainScreen({ navigation }: Props) {
 
-    const [quizMode, setQuizMode] = useState(false);
+    // const [quizMode, setQuizMode] = useState(false);
 
     const list = getList(); 
     const engTranslation = getEngTranslation(); 
     const pinyin = getPinyin(); 
-
+    const quizMode = getMode(); 
 
     const [count, setCount] = useState(0);
     const [textCount, setTextCount] = useState(0);
@@ -184,8 +185,8 @@ export default function MainScreen({ navigation }: Props) {
 
     <View ref={characterTargetDiv}></View>
 
-    <button onClick={handleLesson}> Lesson Mode </button>
-    <button onClick={handleQuiz}> Quiz Mode </button>
+    {/* <button onClick={handleLesson}> Lesson Mode </button> */}
+    {/* <button onClick={handleQuiz}> Quiz Mode </button> */}
     <button onClick={nextCharacter}> Next </button>
 
     </View>

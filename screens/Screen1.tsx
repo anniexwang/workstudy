@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 // import { RootStackParamList } from '../types';
@@ -6,13 +6,31 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 type RootStackParamList = {
     Home: undefined;
     Details: undefined;
+    Dropdown: undefined;    
+    Main: undefined;
   };
 
 type Props = {
   navigation: NativeStackNavigationProp<RootStackParamList, 'Home'>;
 };
 
+let currentMode = false;
+
+export const setModeFunc = (modeValue: boolean) => {
+  currentMode = modeValue;
+}
+
+export const getMode = () => currentMode;
+
 export default function HomeScreen({ navigation }: Props) {
+  
+  const [mode, setMode] = useState(false);
+
+  const updateMode = (newMode: boolean) => {
+    setMode(newMode);
+    setModeFunc(newMode);
+  };
+
   return (
     
     <View style={styles.container}>
@@ -24,7 +42,10 @@ export default function HomeScreen({ navigation }: Props) {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => {
+          updateMode(true);
+          navigation.navigate('Details');
+        }}
       >
         <Text style={styles.buttonText}>Quiz</Text>
       </TouchableOpacity>
