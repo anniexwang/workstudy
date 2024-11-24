@@ -81,7 +81,7 @@ export default function MainScreen({ navigation }: Props) {
     
     void next;
 
-    const writerRef = useRef(null);
+    const writerRef = useRef<HanziWriter | null>(null);
 
 
     const characterTargetDiv = useRef(null);

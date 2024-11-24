@@ -88,7 +88,7 @@ export default function DropdownScreen({ navigation }: Props) {
     searchPlaceholder="Search..."
     value={dropdown}
     onChange={item => {
-        setDropdown(item.value);
+        // setDropdown(item.value);
         writer?.hideCharacter();
         writer?.hideOutline();
         updateList(item.list);

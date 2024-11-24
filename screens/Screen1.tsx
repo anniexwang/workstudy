@@ -38,7 +38,10 @@ export default function HomeScreen({ navigation }: Props) {
     <View style={styles.container}>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => {
+          updateMode(false);
+          navigation.navigate('Details');
+        }}
       >
         <Text style={styles.buttonText}>Lesson</Text>
       </TouchableOpacity>
