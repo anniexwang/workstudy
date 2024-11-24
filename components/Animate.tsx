@@ -1,7 +1,5 @@
-import { StyleSheet } from 'react-native';
+// import { StyleSheet } from 'react-native';
 import { useState, useEffect } from 'react';
-
-import { ThemedText } from '@/components/ThemedText';
 
 type Props = {
     jsonData: any,
@@ -33,7 +31,3 @@ export function Animate({jsonData, index2}: Props) {
     
   );
 }
-
-const styles = StyleSheet.create({
-  
-});

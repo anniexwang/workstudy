@@ -26,6 +26,8 @@ export default function HomeScreen({ navigation }: Props) {
   
   const [mode, setMode] = useState(false);
 
+  void mode;
+
   const updateMode = (newMode: boolean) => {
     setMode(newMode);
     setModeFunc(newMode);

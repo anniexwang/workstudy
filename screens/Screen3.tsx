@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+// import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 // import { RootStackParamList } from '../types';
 import { setListFunc, setEngFunc, setPinyinFunc } from './Screen2';
-import { getList, getEngTranslation, getPinyin } from './Screen2';
+// import { getList, getEngTranslation, getPinyin } from './Screen2';
 import { listCharacters, listRadicals1, listRadicals2, listRadicals3, listRadicals4, listRadicals5, listRadicals6, listRadicals7, listRadicals8, listRadicals9, listRadicals10 } from './Screen4';
 
 import { Dropdown } from 'react-native-element-dropdown';
@@ -22,9 +24,9 @@ type Props = {
 };
 
 
-let currentList: string[] = []; 
-let currentEngTranslation: string[] = []; 
-let currentPinyin: string[] = [];
+// let currentList: string[] = []; 
+// let currentEngTranslation: string[] = []; 
+// let currentPinyin: string[] = [];
 
 
 const data = [
@@ -48,6 +50,10 @@ export default function DropdownScreen({ navigation }: Props) {
     const [list, setList] = useState<string[]>(listCharacters);
     const [engTranslation, setEngTranslation] = useState<string[]>(listCharacters);
     const [pinyin, setPinyin] = useState<string[]>();
+
+    void list;
+    void engTranslation;
+    void pinyin;
 
     const updateList = (newList: string[]) => {
         setList(newList);
@@ -88,34 +94,34 @@ export default function DropdownScreen({ navigation }: Props) {
         updateList(item.list);
         updateEng(item.eng);
         updatePinyin(item.pinyin);
-        if (item.value == '1') {
+        if (item.value === '1') {
             updateList(listRadicals1);
         }
-        if (item.value == '2') {
+        if (item.value === '2') {
             updateList(listRadicals2);
         }
-        if (item.value == '3') {
+        if (item.value === '3') {
             updateList(listRadicals3);
         }
-        if (item.value == '4') {
+        if (item.value === '4') {
             updateList(listRadicals4);
         }
-        if (item.value == '5') {
+        if (item.value === '5') {
             updateList(listRadicals5);
         }
-        if (item.value == '6') {
+        if (item.value === '6') {
             updateList(listRadicals6);
         }
-        if (item.value == '7') {
+        if (item.value === '7') {
             updateList(listRadicals7);
         }
-        if (item.value == '8') {
+        if (item.value === '8') {
             updateList(listRadicals8);
         }
-        if (item.value == '9') {
+        if (item.value === '9') {
             updateList(listRadicals9);
         }
-        if (item.value == '10') {
+        if (item.value === '10') {
             updateList(listRadicals10);
         }
         navigation.navigate('Main');

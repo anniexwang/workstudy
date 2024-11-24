@@ -44,6 +44,9 @@ export default function DropdownScreen({ navigation }: Props) {
   const [engTranslation, setEngTranslation] = useState<string[]>();
   const [pinyin, setPinyin] = useState<string[]>();
 
+  void list;
+  void engTranslation;
+  void pinyin;
 
   const updateList = (newList: string[]) => {
     setList(newList);
