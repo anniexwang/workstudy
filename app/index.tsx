@@ -39,7 +39,7 @@ export default function App() {
           component={HomeScreen} 
           options={{ title: 'My Home' }}
         />
-        {/* <Stack.Screen 
+        <Stack.Screen 
           name="Details" 
           component={DetailsScreen} 
           options={{ title: 'Details' }}
@@ -53,7 +53,7 @@ export default function App() {
           name="Main" 
           component={MainScreen} 
           options={{ title: 'Main' }}
-        /> */}
+        />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
