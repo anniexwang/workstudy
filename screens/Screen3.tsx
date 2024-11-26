@@ -30,7 +30,7 @@ type Props = {
 
 
 const data = [
-    { label: 'Lesson 1', value: '1', list: ["人", "口", "土", "女", "心", "手", "日", "月", "木", "氵"], eng: ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"], pinyin: []},
+    { label: 'Lesson 1', value: '1', list: ["人", "口", "土", "女", "心", "手", "日", "月", "木", "氵"], eng: [], pinyin: []},
     { label: 'Lesson 2', value: '2', list: ["火", "纟", "艹", "讠", "辶", "钅", "刂", "宀", "贝", "一"], eng: [], pinyin: []},
     { label: 'Lesson 3', value: '3', list: ["力", "又", "犭", "禾", "⺮", "虫", "阝", "大", "广", "田"], eng: [], pinyin: []},
     { label: 'Lesson 4', value: '4', list: ["目", "石", "衤", "足", "马", "页", "巾", "米", "车", "八"], eng: [], pinyin: []},
