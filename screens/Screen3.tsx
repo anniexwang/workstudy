@@ -46,6 +46,7 @@ const data = [
 export default function DropdownScreen({ navigation }: Props) {
     
     const [dropdown, setDropdown] = useState(null);
+    void setDropdown;
     
     const [list, setList] = useState<string[]>(listCharacters);
     const [engTranslation, setEngTranslation] = useState<string[]>(listCharacters);

@@ -114,7 +114,7 @@ export default function MainScreen({ navigation }: Props) {
             }});
         }
 
-    }, [list, quizMode, count]);
+    }, [list, quizMode, count, progressCount]);
 
     const nextCharacter = () => {
 
