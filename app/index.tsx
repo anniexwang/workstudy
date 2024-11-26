@@ -14,7 +14,6 @@ type RootStackParamList = {
     Details: undefined;
     Dropdown: undefined;
     Main: undefined;
-
   };
 
 

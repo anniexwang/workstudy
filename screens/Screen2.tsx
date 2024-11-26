@@ -38,7 +38,7 @@ export const getEngTranslation = () => currentEngTranslation;
 export const getPinyin = () => currentPinyin;
 
 
-export default function DropdownScreen({ navigation }: Props) {
+export default function DetailsScreen({ navigation }: Props) {
   
   const [list, setList] = useState<string[]>(listCharacters);
   const [engTranslation, setEngTranslation] = useState<string[]>();

@@ -77,6 +77,8 @@ export default function MainScreen({ navigation }: Props) {
 
     const [count, setCount] = useState(0);
     const [textCount, setTextCount] = useState(0);
+    const [progressCount, setProgressCount] = useState(0);
+
     const [next, setNext] = useState(false);
     
     void next;
@@ -100,6 +102,7 @@ export default function MainScreen({ navigation }: Props) {
         if (!quizMode) {
             writer?.animateCharacter({onComplete: function () {
         writer?.quiz({ leniency: 0.75, highlightOnComplete: true, onComplete: function() {
+          setProgressCount(progressCount + 1);
         }});
         }});
         }
@@ -107,6 +110,7 @@ export default function MainScreen({ navigation }: Props) {
             writer?.hideCharacter();
             writer?.hideOutline();
             writer?.quiz({ leniency: 0.75, highlightOnComplete: true, onComplete: function() {
+              setProgressCount(progressCount + 1);
             }});
         }
 
@@ -175,7 +179,9 @@ export default function MainScreen({ navigation }: Props) {
               }}>
 
 
-    <Progress.Bar progress={count/list.length} width={200} />
+    {/* <Progress.Bar progress={count/list.length} width={200} /> */}
+    <Progress.Bar progress={progressCount/list.length} width={200} />
+
 
     <Text>{engTranslation[textCount]}</Text>
     <Text>{pinyin[textCount]}</Text>
