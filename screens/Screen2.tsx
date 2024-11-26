@@ -84,37 +84,37 @@ export default function DetailsScreen({ navigation }: Props) {
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Dropdown')}
+        // onPress={() => navigation.navigate('Dropdown')}
       >
         <Text style={styles.buttonText}>EAS100</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Dropdown')}
+        // onPress={() => navigation.navigate('Dropdown')}
       >
         <Text style={styles.buttonText}>EAS101</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Dropdown')}
+        // onPress={() => navigation.navigate('Dropdown')}
       >
         <Text style={styles.buttonText}>EAS200</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Dropdown')}
+        // onPress={() => navigation.navigate('Dropdown')}
       >
         <Text style={styles.buttonText}>EAS300</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Dropdown')}
+        // onPress={() => navigation.navigate('Dropdown')}
       >
         <Text style={styles.buttonText}>EAS402</Text>
       </TouchableOpacity>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('Dropdown')}
+        // onPress={() => navigation.navigate('Dropdown')}
       >
         <Text style={styles.buttonText}>EAS404</Text>
       </TouchableOpacity>
