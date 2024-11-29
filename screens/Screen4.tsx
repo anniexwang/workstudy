@@ -35,7 +35,7 @@ type Props = {
 export const listCharacters = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 export const listNumbers = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 export const engTranslationNumbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-export const pinyinNumbers = ["yi", "er", "san", "si", "wu", "liu", "qi", "ba", "jiu", "shi"];
+export const pinyinNumbers = ["yī", "er", "san", "si", "wu", "liu", "qi", "ba", "jiu", "shi"];
 
 export const listRadicals1 = ["人", "口", "土", "女", "心", "手", "日", "月", "木", "氵"];
 export const listRadicals2 = ["火", "纟", "艹", "讠", "辶", "钅", "刂", "宀", "贝", "一"];

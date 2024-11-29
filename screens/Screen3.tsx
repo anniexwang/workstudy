@@ -30,16 +30,16 @@ type Props = {
 
 
 const data = [
-    { label: 'Lesson 1', value: '1', list: ["人", "口", "土", "女", "心", "手", "日", "月", "木", "氵"], eng: [], pinyin: []},
-    { label: 'Lesson 2', value: '2', list: ["火", "纟", "艹", "讠", "辶", "钅", "刂", "宀", "贝", "一"], eng: [], pinyin: []},
-    { label: 'Lesson 3', value: '3', list: ["力", "又", "犭", "禾", "⺮", "虫", "阝", "大", "广", "田"], eng: [], pinyin: []},
-    { label: 'Lesson 4', value: '4', list: ["目", "石", "衤", "足", "马", "页", "巾", "米", "车", "八"], eng: [], pinyin: []},
-    { label: 'Lesson 5', value: '5', list: ["尸", "寸", "山", "攵", "彳", "十", "工", "方", "门", "饣"], eng: [], pinyin: []},
-    { label: 'Lesson 6', value: '6', list: ["欠", "儿", "冫", "子", "疒", "隹", "斤", "亠", "王", "白"], eng: [], pinyin: []},
-    { label: 'Lesson 7', value: '7', list: ["立", "羊", "艮", "冖", "厂", "皿", "礻", "穴", "走", "雨"], eng: [], pinyin: []},
-    { label: 'Lesson 8', value: '8', list: ["口", "小", "戈", "几", "舌", "干", "殳", "夕", "止", "牜"], eng: [], pinyin: []},
-    { label: 'Lesson 9', value: '9', list: ["皮", "耳", "辛", "阝", "酉", "青", "鸟", "弓", "厶", "户"], eng: [], pinyin: []},
-    { label: 'Lesson 10', value: '10', list: ["羽", "舟", "里", "匕", "夊", "见", "卩", "𦉪", "士", "勹"], eng: [], pinyin: []},
+    { label: 'Lesson 1', value: '1', list: ["人", "口", "土", "女", "心", "手", "日", "月", "木", "氵"], eng: ["human, person, people", "mouth, opening", "earth", "woman, female", "heart", "hand", "sun, day", "moon, month", "tree", "water"], pinyin: ["rén", "kǒu", "tǔ", "nü", "xīn", "shǒu", "rì", "yùe", "mù", "shǔi"]},
+    { label: 'Lesson 2', value: '2', list: ["火", "纟", "艹", "讠", "辶", "钅", "刂", "宀", "贝", "一"], eng: ["fire", "silk", "grass", "speech", "walk", "gold, metal", "knife, sword", "roof", "shell", "one"], pinyin: ["hǔo", "mì", "cǎo", "yán", "chùo", "jīn", "dāo", "mían", "bèi", "yī"]},
+    { label: 'Lesson 3', value: '3', list: ["力", "又", "犭", "禾", "⺮", "虫", "阝", "大", "广", "田"], eng: ["power, force", "right hand", "dog", "grain", "bamboo", "insect", "mound, dam", "big, very", "house on cliff", "field"], pinyin: []},
+    { label: 'Lesson 4', value: '4', list: ["目", "石", "衤", "足", "马", "页", "巾", "米", "车", "八"], eng: ["eye", "stone", "clothes", "foot", "horse", "leaf", "turban, scarf", "rice", "cart, vehicle", "eight"], pinyin: []},
+    { label: 'Lesson 5', value: '5', list: ["尸", "寸", "山", "攵", "彳", "十", "工", "方", "门", "饣"], eng: ["corpse", "thumb, inch", "mountain", "knock, tap", "(small) step", "ten", "work", "square, raft", "gate", "eat, food"], pinyin: []},
+    { label: 'Lesson 6', value: '6', list: ["欠", "儿", "冫", "子", "疒", "隹", "斤", "亠", "王", "白"], eng: ["lack, yawn", "human, legs", "ice", "child, seed", "sickness", "(short-tailed) bird", "axe, pound", "lid", "jade, king", "white"], pinyin: []},
+    { label: 'Lesson 7', value: '7', list: ["立", "羊", "艮", "冖", "厂", "皿", "礻", "穴", "走", "雨"], eng: ["stand, erect", "sheep", "stopping", "cover", "cliff", "dish", "sign, spirit, show", "cave", "run, walk", "rain"], pinyin: []},
+    { label: 'Lesson 8', value: '8', list: ["口", "小", "戈", "几", "舌", "干", "殳", "夕", "止", "牜"], eng: ["enclosure", "small", "halberd, spear", "table", "tongue", "dry", "weapon", "evening, sunset", "stop", "cow"], pinyin: []},
+    { label: 'Lesson 9', value: '9', list: ["皮", "耳", "辛", "阝", "酉", "青", "鸟", "弓", "厶", "户"], eng: ["skin", "ear", "bitter", "city", "wine", "green/blue", "bird", "bow", "private", "door, house"], pinyin: []},
+    { label: 'Lesson 10', value: '10', list: ["羽", "舟", "里", "匕", "夊", "见", "卩", "𦉪", "士", "勹"], eng: ["feather", "boat", "village, mile", "spoon", "go (slowly)", "see", "seal", "net", "scholar", "embrace, wrap"], pinyin: []},
 ];
 
 
