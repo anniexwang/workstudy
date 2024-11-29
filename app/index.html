@@ -1,4 +1,4 @@
-import React from 'react';
+<!-- import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomeScreen from './screens/Screen1';
 import DetailsScreen from './screens/Screen2';
@@ -10,6 +10,71 @@ function App() {
     <Router>
       <Switch>
         <Route path="/home" component={HomeScreen} />
+        <Route path="/details" component={DetailsScreen} />
+        <Route path="/dropdown" component={DropdownScreen} />
+        <Route path="/main" component={MainScreen} />
+      </Switch>
+    </Router>
+  );
+}
+
+export default App;
+ -->
+
+ import React from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+
+// Define basic screen components for each page
+const HomeScreen = () => (
+  <div>
+    <h1>Home Screen</h1>
+    <nav>
+      <Link to="/details">Go to Details</Link><br />
+      <Link to="/dropdown">Go to Dropdown</Link><br />
+      <Link to="/main">Go to Main</Link>
+    </nav>
+  </div>
+);
+
+const DetailsScreen = () => (
+  <div>
+    <h1>Details Screen</h1>
+    <nav>
+      <Link to="/home">Go to Home</Link><br />
+      <Link to="/dropdown">Go to Dropdown</Link><br />
+      <Link to="/main">Go to Main</Link>
+    </nav>
+  </div>
+);
+
+const DropdownScreen = () => (
+  <div>
+    <h1>Dropdown Screen</h1>
+    <nav>
+      <Link to="/home">Go to Home</Link><br />
+      <Link to="/details">Go to Details</Link><br />
+      <Link to="/main">Go to Main</Link>
+    </nav>
+  </div>
+);
+
+const MainScreen = () => (
+  <div>
+    <h1>Main Screen</h1>
+    <nav>
+      <Link to="/home">Go to Home</Link><br />
+      <Link to="/details">Go to Details</Link><br />
+      <Link to="/dropdown">Go to Dropdown</Link>
+    </nav>
+  </div>
+);
+
+// The main App component
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/home" component={HomeScreen} />
         <Route path="/details" component={DetailsScreen} />
         <Route path="/dropdown" component={DropdownScreen} />
         <Route path="/main" component={MainScreen} />
