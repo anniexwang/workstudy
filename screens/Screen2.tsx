@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 // import { RootStackParamList } from '../types';
-import { listCharacters, listNumbers, engTranslationNumbers, pinyinNumbers} from './Screen4';
+// import { listCharacters, listNumbers, engTranslationNumbers, pinyinNumbers} from './Screen4';
+import { listCharacters, listNumbers, engTranslationNumbers, pinyinNumbers, colloquialNumbers, colloquialPinyinNumbers} from './Screen4';
 
 type RootStackParamList = {
     Home: undefined;
@@ -19,6 +20,8 @@ type Props = {
 let currentList: string[] = [];
 let currentEngTranslation: string[] = [];
 let currentPinyin: string[] = [];
+let currentColloquial: string[] = [];
+let currentColloquialPinyin: string[] = [];
 
 
 export const setListFunc = (listValue: string[]) => {
@@ -33,9 +36,19 @@ export const setPinyinFunc = (pinyinValue: string[]) => {
   currentPinyin = pinyinValue;
 }
 
+export const setColloquialFunc = (colloquialValue: string[]) => {
+  currentColloquial = colloquialValue;
+}
+
+export const setColloquialPinyinFunc = (colloquialPinyinValue: string[]) => {
+  currentColloquialPinyin = colloquialPinyinValue;
+}
+
 export const getList = () => currentList;
 export const getEngTranslation = () => currentEngTranslation;
 export const getPinyin = () => currentPinyin;
+export const getColloquial = () => currentColloquial;
+export const getColloquialPinyin = () => currentColloquialPinyin;
 
 
 export default function DetailsScreen({ navigation }: Props) {
@@ -43,10 +56,14 @@ export default function DetailsScreen({ navigation }: Props) {
   const [list, setList] = useState<string[]>(listCharacters);
   const [engTranslation, setEngTranslation] = useState<string[]>();
   const [pinyin, setPinyin] = useState<string[]>();
+  const [colloquial, setColloquial] = useState<string[]>();
+  const [colloquialPinyin, setColloquialPinyin] = useState<string[]>();
 
   void list;
   void engTranslation;
   void pinyin;
+  void colloquial;
+  void colloquialPinyin;
 
   const updateList = (newList: string[]) => {
     setList(newList);
@@ -63,6 +80,16 @@ export default function DetailsScreen({ navigation }: Props) {
     setPinyinFunc(newList);
   };
 
+  const updateColloquial = (newList: string[]) => {
+    setColloquial(newList);
+    setColloquialFunc(newList);
+  };
+
+  const updateColloquialPinyin = (newList: string[]) => {
+    setColloquialPinyin(newList);
+    setColloquialPinyinFunc(newList);
+  };
+
   return (
     <View style={styles.container}>
       <TouchableOpacity
@@ -71,6 +98,8 @@ export default function DetailsScreen({ navigation }: Props) {
           updateList(listNumbers);
           updateEng(engTranslationNumbers);
           updatePinyin(pinyinNumbers);
+          updateColloquial(colloquialNumbers);
+          updateColloquialPinyin(colloquialPinyinNumbers);
           navigation.navigate('Main');
         }}
       >

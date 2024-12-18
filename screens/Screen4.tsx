@@ -16,7 +16,9 @@ import HanziWriter from "hanzi-writer";
 
 import * as Progress from 'react-native-progress';
 
-import { getList, getEngTranslation, getPinyin } from './Screen2';
+import { getList, getEngTranslation, getPinyin, getColloquial, getColloquialPinyin} from './Screen2';
+// import { getList, getEngTranslation, getPinyin} from './Screen2';
+
 
 import { getMode } from './Screen1';
 
@@ -35,14 +37,18 @@ type Props = {
 export const listCharacters = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 export const listNumbers = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
 export const engTranslationNumbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-export const pinyinNumbers = ["yī", "er", "san", "si", "wu", "liu", "qi", "ba", "jiu", "shi"];
+export const pinyinNumbers = ["yī", "èr", "sān", "sì", "wǔ", "liù", "qī", "bā", "jiǔ", "shí"];
+export const colloquialNumbers = ["", "", "", "", "", "", "", "", "", ""];
+export const colloquialPinyinNumbers = ["", "", "", "", "", "", "", "", "", ""];
 
-export const listRadicals1 = ["人", "口", "土", "女", "心", "手", "日", "月", "木", "氵"];
-export const listRadicals2 = ["火", "纟", "艹", "讠", "辶", "钅", "刂", "宀", "贝", "一"];
-export const listRadicals3 = ["力", "又", "犭", "禾", "⺮", "虫", "阝", "大", "广", "田"];
-export const listRadicals4 = ["目", "石", "衤", "足", "马", "页", "巾", "米", "车", "八"];
-export const listRadicals5 = ["尸", "寸", "山", "攵", "彳", "十", "工", "方", "门", "饣"];
+// export const listRadicals1 = ["人", "亻", "口", "土", "女", "心", "忄", "⺗", "手", "扌","龵", "日", "月", "木", "氵", "水", "氺"];
+export const listRadicals1 = ["人", "亻", "口", "土", "女", "心", "忄", "⺗", "手", "扌", "日", "月", "木", "氵", "水", "氺"];
+export const listRadicals2 = ["火", "灬", "纟", "糸", "艹", "讠", "辶", "钅", "刂", "刀", "宀", "贝", "一"];
+export const listRadicals3 = ["力", "又", "犭", "犬", "禾", "⺮", "虫", "阝", "大", "广", "田", "罒"];
+export const listRadicals4 = ["目", "罒", "石", "衤", "足", "马", "页", "巾", "米", "车", "八"];
+export const listRadicals5 = ["尸", "寸", "山", "攵", "攴", "彳", "十", "工", "方", "门", "饣"];
 export const listRadicals6 = ["欠", "儿", "冫", "子", "疒", "隹", "斤", "亠", "王", "白"];
+
 export const listRadicals7 = ["立", "羊", "艮", "冖", "厂", "皿", "礻", "穴", "走", "雨"];
 export const listRadicals8 = ["口", "小", "戈", "几", "舌", "干", "殳", "夕", "止", "牜"];
 export const listRadicals9 = ["皮", "耳", "辛", "阝", "酉", "青", "鸟", "弓", "厶", "户"];
@@ -73,6 +79,8 @@ export default function MainScreen({ navigation }: Props) {
     const list = getList(); 
     const engTranslation = getEngTranslation(); 
     const pinyin = getPinyin(); 
+    const colloquial = getColloquial(); 
+    const colloquialPinyin = getColloquialPinyin(); 
     const quizMode = getMode(); 
 
     const [count, setCount] = useState(0);
@@ -185,6 +193,9 @@ export default function MainScreen({ navigation }: Props) {
 
     <Text>{engTranslation[textCount]}</Text>
     <Text>{pinyin[textCount]}</Text>
+    <Text>{colloquial[textCount]}</Text>
+    <Text>{colloquialPinyin[textCount]}</Text>
+
 
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" id="tian-grid">
         <line x1="0" y1="0" x2="200" y2="200" stroke="#DDD" strokeDasharray="10, 10, 10"/>
