@@ -44,15 +44,17 @@ export const colloquialPinyinNumbers = ["", "", "", "", "", "", "", "", "", ""];
 // export const listRadicals1 = ["人", "亻", "口", "土", "女", "心", "忄", "⺗", "手", "扌","龵", "日", "月", "木", "氵", "水", "氺"];
 export const listRadicals1 = ["人", "亻", "口", "土", "女", "心", "忄", "⺗", "手", "扌", "日", "月", "木", "氵", "水", "氺"];
 export const listRadicals2 = ["火", "灬", "纟", "糸", "艹", "讠", "辶", "钅", "刂", "刀", "宀", "贝", "一"];
-export const listRadicals3 = ["力", "又", "犭", "犬", "禾", "⺮", "虫", "阝", "大", "广", "田", "罒"];
+export const listRadicals3 = ["力", "又", "犭", "犬", "禾", "⺮", "虫", "阝", "大", "广", "田"];
 export const listRadicals4 = ["目", "罒", "石", "衤", "足", "马", "页", "巾", "米", "车", "八"];
 export const listRadicals5 = ["尸", "寸", "山", "攵", "攴", "彳", "十", "工", "方", "门", "饣"];
 export const listRadicals6 = ["欠", "儿", "冫", "子", "疒", "隹", "斤", "亠", "王", "白"];
 
 export const listRadicals7 = ["立", "羊", "艮", "冖", "厂", "皿", "礻", "穴", "走", "雨"];
-export const listRadicals8 = ["口", "小", "戈", "几", "舌", "干", "殳", "夕", "止", "牜"];
+// export const listRadicals8 = ["囗", "小", "戈", "几", "舌", "干", "殳", "夕", "止", "牜"];
+export const listRadicals8 = ["囗", "小", "戈", "几", "舌", "干", "殳", "夕", "止"];
+
 export const listRadicals9 = ["皮", "耳", "辛", "阝", "酉", "青", "鸟", "弓", "厶", "户"];
-export const listRadicals10 = ["羽", "舟", "里", "匕", "夊", "见", "卩", "𦉪", "士", "勹"];
+export const listRadicals10 = ["羽", "舟", "里", "匕", "夊", "见", "卩", "罒", "士", "勹"];
 
 export let writer: HanziWriter | null = null;
 
