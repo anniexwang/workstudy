@@ -219,8 +219,9 @@ export default function MainScreen({ navigation }: Props) {
     
     {next ? <p> Correct! </p> : <></>}
     {next && progressCount < list.length ? <button onClick={nextCharacter}> Next </button> : <></>}
-    {next && progressCount == list.length ? <button onClick={() => navigation.navigate('Home')}> Next Lesson! </button> : <></>}
-    {/* onPress={} */}
+    {next && progressCount == list.length ? <button onClick={() => navigation.navigate('Home')}> Back to Home! </button> : <></>}
+    {/* {next && progressCount == list.length ? <button onClick={() => navigation.navigate('Dropdown')}> Next Lesson! </button> : <></>} */}
+
 
     </View>
   );
