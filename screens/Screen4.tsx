@@ -112,7 +112,8 @@ export default function MainScreen({ navigation }: Props) {
         if (!quizMode) {
             writer?.animateCharacter({onComplete: function () {
         writer?.quiz({ leniency: 0.75, highlightOnComplete: true, onComplete: function() {
-          setProgressCount(progressCount + 1);
+          // setProgressCount(progressCount + 1);
+          setProgressCount(p => p + 1);
         }});
         }});
         }
@@ -120,7 +121,9 @@ export default function MainScreen({ navigation }: Props) {
             writer?.hideCharacter();
             writer?.hideOutline();
             writer?.quiz({ leniency: 0.75, highlightOnComplete: true, onComplete: function() {
-              setProgressCount(progressCount + 1);
+              // setProgressCount(progressCount + 1);
+              setProgressCount(p => p + 1);
+
             }});
         }
 

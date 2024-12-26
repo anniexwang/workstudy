@@ -7,7 +7,8 @@ import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 // import { setListFunc, setEngFunc, setPinyinFunc} from './Screen2';
 import { setListFunc, setEngFunc, setPinyinFunc, setColloquialFunc, setColloquialPinyinFunc } from './Screen2';
 // import { getList, getEngTranslation, getPinyin } from './Screen2';
-import { listCharacters, listRadicals1, listRadicals2, listRadicals3, listRadicals4, listRadicals5, listRadicals6, listRadicals7, listRadicals8, listRadicals9, listRadicals10 } from './Screen4';
+// import { listCharacters, listRadicals1, listRadicals2, listRadicals3, listRadicals4, listRadicals5, listRadicals6, listRadicals7, listRadicals8, listRadicals9, listRadicals10 } from './Screen4';
+import { listRadicals1, listRadicals2, listRadicals3, listRadicals4, listRadicals5, listRadicals6, listRadicals7, listRadicals8, listRadicals9, listRadicals10 } from './Screen4';
 
 import { Dropdown } from 'react-native-element-dropdown';
 
