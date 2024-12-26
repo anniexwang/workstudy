@@ -34,12 +34,13 @@ type Props = {
 };
 
 // let listCharacters = ["我", "爱", "你"];
-export const listCharacters = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-export const listNumbers = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十"];
-export const engTranslationNumbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-export const pinyinNumbers = ["yī", "èr", "sān", "sì", "wǔ", "liù", "qī", "bā", "jiǔ", "shí"];
-export const colloquialNumbers = ["", "", "", "", "", "", "", "", "", ""];
-export const colloquialPinyinNumbers = ["", "", "", "", "", "", "", "", "", ""];
+// export const listCharacters = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "百", "千", "万", "亿"];
+export const listNumbers = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "百", "千", "万", "亿"];
+// export const listNumbers = ["一", "二"];
+export const engTranslationNumbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "hundred", "thousand", "ten thousand", "hundred million"];
+export const pinyinNumbers = ["yī", "èr", "sān", "sì", "wǔ", "liù", "qī", "bā", "jiǔ", "shí", "bǎi", "qiān", "wàn", "yì"];
+export const colloquialNumbers = ["", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+export const colloquialPinyinNumbers = ["", "", "", "", "", "", "", "", "", "", "", "", "", ""];
 
 // export const listRadicals1 = ["人", "亻", "口", "土", "女", "心", "忄", "⺗", "手", "扌","龵", "日", "月", "木", "氵", "水", "氺"];
 export const listRadicals1 = ["人", "亻", "口", "土", "女", "心", "忄", "⺗", "手", "扌", "日", "月", "木", "氵", "水", "氺"];
@@ -143,6 +144,8 @@ export default function MainScreen({ navigation }: Props) {
         }
     }
 
+    // const 
+
     // const handleLesson = () => {
 
     //     setCount(0);
@@ -215,7 +218,9 @@ export default function MainScreen({ navigation }: Props) {
     {/* <button onClick={nextCharacter}> Next </button> */}
     
     {next ? <p> Correct! </p> : <></>}
-    {next ? <button onClick={nextCharacter}> Next </button> : <></>}
+    {next && progressCount < list.length ? <button onClick={nextCharacter}> Next </button> : <></>}
+    {next && progressCount == list.length ? <button onClick={() => navigation.navigate('Home')}> Next Lesson! </button> : <></>}
+    {/* onPress={} */}
 
     </View>
   );
