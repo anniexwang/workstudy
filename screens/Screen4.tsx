@@ -110,12 +110,13 @@ export default function MainScreen({ navigation }: Props) {
         writerRef.current = writer;
 
         if (!quizMode) {
-            writer?.animateCharacter({onComplete: function () {
-        writer?.quiz({ leniency: 0.75, highlightOnComplete: true, onComplete: function() {
-          // setProgressCount(progressCount + 1);
-          setProgressCount(p => p + 1);
-        }});
-        }});
+          writer?.animateCharacter({onComplete: function () {
+            writer?.quiz({ leniency: 0.75, highlightOnComplete: true, onComplete: function() {
+            // setProgressCount(progressCount + 1);
+            setProgressCount(p => p + 1);
+            setNext(true);
+            }});
+          }});
         }
         else {
             writer?.hideCharacter();
@@ -123,20 +124,18 @@ export default function MainScreen({ navigation }: Props) {
             writer?.quiz({ leniency: 0.75, highlightOnComplete: true, onComplete: function() {
               // setProgressCount(progressCount + 1);
               setProgressCount(p => p + 1);
+              setNext(true);
+
 
             }});
         }
 
     }, [list, quizMode, count]);
 
-    const nextCharacter = () => {
-
-        
-        setNext(true);
-        
+    const nextCharacter = () => {        
+        setNext(false);
         writer?.hideCharacter();
         writer?.hideOutline();
-
 
         if ( count < list.length - 1){
             setTextCount(count + 1);
@@ -213,7 +212,10 @@ export default function MainScreen({ navigation }: Props) {
 
     {/* <button onClick={handleLesson}> Lesson Mode </button> */}
     {/* <button onClick={handleQuiz}> Quiz Mode </button> */}
-    <button onClick={nextCharacter}> Next </button>
+    {/* <button onClick={nextCharacter}> Next </button> */}
+    
+    {next ? <p> Correct! </p> : <></>}
+    {next ? <button onClick={nextCharacter}> Next </button> : <></>}
 
     </View>
   );
