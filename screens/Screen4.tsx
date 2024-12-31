@@ -22,6 +22,9 @@ import { getList, getEngTranslation, getPinyin, getColloquial, getColloquialPiny
 
 import { getMode } from './Screen1';
 
+// import Tts from 'react-native-tts';
+import * as Speech from 'expo-speech';
+
 type RootStackParamList = {
     Home: undefined;
     Details: undefined;
@@ -96,8 +99,26 @@ export default function MainScreen({ navigation }: Props) {
 
     const writerRef = useRef<HanziWriter | null>(null);
 
-
     const characterTargetDiv = useRef(null);
+
+    // Tts.setDefaultLanguage('zh-CN');
+    // Tts.getInitStatus().then(() => {
+    //   Tts.speak('Hello, world!');
+    // })
+
+    const speak = (character: any) => {
+      // const thingToSay = '一';
+      const options = {
+        language: 'zh-CN',
+        pitch: 1, // < 1 = lower pitch, > 1 = higher pitch
+        rate: 0.5, // < 1 = slower, > 1 = faster
+        // voice: , // ios only
+        // onDone: ,
+        // onError: ,
+      };
+
+      Speech.speak(character, options);
+    };
 
     useEffect(() => {
         writer = HanziWriter.create('tian-grid', list[count], {
@@ -111,7 +132,10 @@ export default function MainScreen({ navigation }: Props) {
         writerRef.current = writer;
 
         if (!quizMode) {
+          speak(list[count]);
           writer?.animateCharacter({onComplete: function () {
+            // Tts.speak('你好');
+            // Tts.speak('Hello');            
             writer?.quiz({ leniency: 0.75, highlightOnComplete: true, onComplete: function() {
             // setProgressCount(progressCount + 1);
             setProgressCount(p => p + 1);
