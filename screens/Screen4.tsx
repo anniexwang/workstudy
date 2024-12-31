@@ -214,6 +214,7 @@ export default function MainScreen({ navigation }: Props) {
                 justifyContent: "center",
                 alignItems: "center",
                 rowGap: 10,
+                // columnGap: 10,
         
               }}>
 
@@ -223,7 +224,11 @@ export default function MainScreen({ navigation }: Props) {
 
 
     <Text>{engTranslation[textCount]}</Text>
-    <Text>{pinyin[textCount]}</Text>
+    <div style={{ display: 'flex', columnGap: 10}}>
+      <button onClick={() => speak(list[count])}> S </button>
+      <Text>{pinyin[textCount]}</Text>
+
+    </div>
     <Text>{colloquial[textCount]}</Text>
     <Text>{colloquialPinyin[textCount]}</Text>
 
