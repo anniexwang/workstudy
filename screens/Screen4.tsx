@@ -34,7 +34,7 @@ type Props = {
 };
 
 // let listCharacters = ["我", "爱", "你"];
-// export const listCharacters = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "百", "千", "万", "亿"];
+export const listCharacters = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "百", "千", "万", "亿"];
 export const listNumbers = ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "百", "千", "万", "亿"];
 // export const listNumbers = ["一", "二"];
 export const engTranslationNumbers = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "hundred", "thousand", "ten thousand", "hundred million"];

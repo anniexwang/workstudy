@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
 // import { RootStackParamList } from '../types';
 // import { listCharacters, listNumbers, engTranslationNumbers, pinyinNumbers} from './Screen4';
@@ -91,67 +91,77 @@ export default function DetailsScreen({ navigation }: Props) {
   };
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => {
-          updateList(listNumbers);
-          updateEng(engTranslationNumbers);
-          updatePinyin(pinyinNumbers);
-          updateColloquial(colloquialNumbers);
-          updateColloquialPinyin(colloquialPinyinNumbers);
-          navigation.navigate('Main');
-        }}
-      >
-        <Text style={styles.buttonText}>Numbers</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Dropdown')}
-      >
-        <Text style={styles.buttonText}>Radicals</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        // onPress={() => navigation.navigate('Dropdown')}
-      >
-        <Text style={styles.buttonText}>EAS100</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        // onPress={() => navigation.navigate('Dropdown')}
-      >
-        <Text style={styles.buttonText}>EAS101</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        // onPress={() => navigation.navigate('Dropdown')}
-      >
-        <Text style={styles.buttonText}>EAS200</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        // onPress={() => navigation.navigate('Dropdown')}
-      >
-        <Text style={styles.buttonText}>EAS300</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        // onPress={() => navigation.navigate('Dropdown')}
-      >
-        <Text style={styles.buttonText}>EAS402</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.button}
-        // onPress={() => navigation.navigate('Dropdown')}
-      >
-        <Text style={styles.buttonText}>EAS404</Text>
-      </TouchableOpacity>
-    </View>
+    <ScrollView contentContainerStyle={styles.scroll}>
+      <View style={styles.container}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            updateList(listNumbers);
+            updateEng(engTranslationNumbers);
+            updatePinyin(pinyinNumbers);
+            updateColloquial(colloquialNumbers);
+            updateColloquialPinyin(colloquialPinyinNumbers);
+            navigation.navigate('Main');
+          }}
+        >
+          <Text style={styles.buttonText}>Numbers</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('Dropdown')}
+        >
+          <Text style={styles.buttonText}>Radicals</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          // onPress={() => navigation.navigate('Dropdown')}
+        >
+          <Text style={styles.buttonText}>EAS100</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          // onPress={() => navigation.navigate('Dropdown')}
+        >
+          <Text style={styles.buttonText}>EAS101</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          // onPress={() => navigation.navigate('Dropdown')}
+        >
+          <Text style={styles.buttonText}>EAS200</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          // onPress={() => navigation.navigate('Dropdown')}
+        >
+          <Text style={styles.buttonText}>EAS300</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          // onPress={() => navigation.navigate('Dropdown')}
+        >
+          <Text style={styles.buttonText}>EAS402</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          // onPress={() => navigation.navigate('Dropdown')}
+        >
+          <Text style={styles.buttonText}>EAS404</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  scroll: {
+    // flex: 1,
+    padding: 20,
+    justifyContent: 'center',
+    alignItems: 'center',
+    // padding: 20,
+    gap: 20
+  },
   container: {
     flex: 1,
     alignItems: 'center',
