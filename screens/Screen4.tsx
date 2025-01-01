@@ -225,6 +225,8 @@ export default function MainScreen({ navigation }: Props) {
 
     <Text>{engTranslation[textCount]}</Text>
     <div style={{ display: 'flex', columnGap: 10}}>
+
+    {/* <div style={{ display: 'flex', columnGap: 10, justifyContent: 'flex-end', alignItems: 'flex-end'}}> */}
       <button onClick={() => speak(list[count])}> S </button>
       <Text>{pinyin[textCount]}</Text>
 
